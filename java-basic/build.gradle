@@ -27,6 +27,15 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+javadoc{
+    options.encoding = "UTF-8"
+    // 싱글콘테이션이나 더블콘테이션이나 똑같다 `` ""
+}
+
+compileJava{
+    options.encoding = 'UTF-8'
+}
+
 // Define the main class for the application
 mainClassName = 'App'
 
