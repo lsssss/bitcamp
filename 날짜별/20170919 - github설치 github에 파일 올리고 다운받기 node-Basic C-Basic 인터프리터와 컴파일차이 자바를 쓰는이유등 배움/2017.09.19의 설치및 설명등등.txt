@@ -1,0 +1,126 @@
+2017.09.19
+설치파일
+
+운영체제에서 우리가 만든 소스코드를 사용하기 위해서는 우리가 이해하는 소스코드를 기계가 이해할수 있게 해주는 코드로 변환해 줘야하는대 방식으로는
+
+첫번째 interpreter 방식과 두번째 Compile방식 세번째 자바방식이다
+
+첫번쨰 interpreter방식
+
+nodejs.org 접속해서
+
+interpreter - Node.js 
+
+설치후 cmd창에서 node -v로 버전 확인하기
+
+자바스크립트를 여러 운영체제에서 사용하기 위해 node라는 통역자(interpreter)를 사용한다
+
+이것을 플랫폼에 비종속이라고 말한다
+
+비주얼 스튜디오 코드에서
+
+workspace 밑에
+
+node-basic 폴더를 생성
+
+hello.js 생성
+
+console.log("Hello, world")
+console.log("hahahahahahahahahah")
+console.log("안녕하세요")
+console.log(50+50)
+
+
+자바 스크립트를 바로 실행하기 위해서 node를 사용함
+
+node의 단점은 속도가 느리고 
+코드를 실행하기 전까지 해당코드의 오류를 알수 없다
+
+2.두번째 Compile방식
+
+컴파일러 Cygwin을 접속하여 다운받고
+설치한다 
+Cygwin은 평소 우리가 쓰는 윈도우 환경에서 별도로 리눅스를 설치하지 않고 리눅스의 환경을 만들기 위해 선택한다
+
+설치하다 카테고리 선택시
+binutil
+cmake
+gcccore
+gcc g++
+make 
+gdb을 설치한다
+
+환경변수 설정시 C:\cygwin64\bin과
+C:\cygwin64\usr\include 를 path에 설정해준다
+
+비쥬얼코드 열고
+workspace에 c-basic 만들고
+hello.c 파일 생성 
+
+#include <stdio.h>
+void main(){
+    printf("Hello, world!");
+} 
+코드입력 
+gcc hello.c로 컴파일 하여 a.exe를 생성한다
+바로 명령어창에 a를 입력하면 
+hello.c의 내용이 기계어로 바로 실행된다
+compiler방식은 속도는 빠르지만
+플랫폼에 종속된다
+소스파일을 보호할수 있다
+
+세번째 자바의 방식
+java의 구동 원리
+Write Once Run Anywhere
+한번 쓰고 어디서느 구동가능하게함
+java = 인터프리터방식과 컴파일 방식을 혼합한 방식이다 
+
+Hello.java를 javac로 컴파일시 Hello.class파일이 생성되는대 Hello.class는 기계어와 흡사한 중간 코드이다 구성은
+1byte 동작코드와 0개이상의 명령어를 사용
+10+20의 +는 연산자(operator)=operation code = opcode = 동작코드 =byte코드
+
+이렇게 생성된 .class파일을 JVM이 실행하며 JVM은 플레이어,엔진,인터프리터,vm로 불린다
+
+
+-------------------------------------------------------------------------------------------------
+
+github를 이용해서 파일공유하기 위해
+https://git-scm.com/
+파일 설치함
+
+설치후 C:\Users\Bit\git 위치에
+readme 파일을 visual code에서 열어서 수정수정수정 한뒤 
+
+git폴더 밑에 myrep생성하기
+
+cmd창으로 가서
+git add.
+git commit -m `test...`
+입력하면 에러가 뜸 짓허브의 이메일과 이름을 입력하라고 나옴
+git config --global user.email "vkqqnfl@naver.com"
+
+git config --global user.name "lssss"
+
+입력하하고>git  commit
+
+github에 글올리기
+
+1.로컬저장소에 백업할 명단작성
+>git add .
+
+.=all
+
+2.로컬 저장소에 백업
+>git commit -m `사유`
+
+3.서버의 원격 저장소에 업로드
+>git push
+
+
+github에서 자료퍼오기
+
+>git clone 주소
+ 
+
+
+---------------------------------------------------------------------------------------------

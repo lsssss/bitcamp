@@ -1,0 +1,18 @@
+Test01.java = Source Code  ------------------------>>>Test01.class = Bytecode or p-code ------------------------------->>>> 실행
+				java.exe 컴파일						    java.exe(JVM) = interpreter
+
+비주얼 스튜디오 코드 프로그램에서 실행창은 기본 cmd랑 Power shell이 있음 명령 방식이 다름
+
+
+소스편집기
+-Visual studio code
+-Visual studio code key short cut
+-Atom
+개발자 도구
+- JDK 설치
+
+
+사이트
+github.com
+
+github.com/eomjinyoung - 강사님사이트

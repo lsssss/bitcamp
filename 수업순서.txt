@@ -1,0 +1,9 @@
+순서	JAVA		->	네트워킹	->	JDBC	->		Servlet/Jsp	->	Mybatis		->	Spring		->	HTML/CSS 	->	Mobile Hybrid App
+과목	언어기초		sock			SQL			Servlet			Mybatis			IOC컨테이너		JQuery
+	oop			Thread			DB모델링		JSP			Frame			MVC			Bootsrap
+						JDBC			JSTL&EL
+									MVC
+툴	VIsual Studio code	
+	Atom
+	Eclipse
+	JDK
