@@ -19,21 +19,19 @@ repositories {
     jcenter()
 }
 
+javadoc{
+    options.encoding = "UTF-8"
+}
 
+compileJava{
+    options.encoding ="UTF-8"
+}
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:22.0'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
-}
-
-javadoc{
-    options.encoding = "UTF-8"
-    // 싱글콘테이션이나 더블콘테이션이나 똑같다 `` ""
-}
-compileJava{
-    options.encoding = 'UTF-8'
 }
 
 // Define the main class for the application

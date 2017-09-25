@@ -2,7 +2,12 @@
 - .java 파일과 class {}과 .class 파일의 관계를 알아보자!
 - .java 파일에 class 블록을 한 개만 두는 이유는?
  */
-class Test07_A {}
+class Test07_A {
+    public static void main(String[] args){
+    System.out.println("hello");
+
+    }
+}
 class Test07_B {}
 class Test07_C {}
 
