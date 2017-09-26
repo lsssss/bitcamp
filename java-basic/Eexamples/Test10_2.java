@@ -23,7 +23,7 @@ public class Test10_2{
     System.out.println(currMillis);
 }
 
-    //>gradlew compilejava
+//>gradlew compilejava
     //>set CLASSPATH=.\build\classes\java\main
     //>java bitcamp.java.100.Test10
     //>java -cp .\build\classes\java\main bitcamp.java100.Test10
