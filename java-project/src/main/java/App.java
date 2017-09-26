@@ -1,13 +1,5 @@
-
-// ver 01
-// -표준 출력장치로 인사 문구 출력하기
-
-
-
-
 public class App {
 
-    import java.util.Scanner;
 
     public static void main(String[] args) {
         
@@ -40,22 +32,22 @@ public class App {
         System.out.print("평점 : ");
         System.out.println(avr);
         
-        Scanner sc = new Scanner(System.in);
-        System.out.print("국어 : ");
-        double korsc = sc.nextInt();
-        System.out.print(korsc);
-        System.out.print("수학 : ");
-        double matsc = sc.nextInt();
-        System.out.print(matsc);
-        System.out.print("영어 : ");
-        double engsc = sc.nextInt();
-        System.out.print(matsc);
-        double totsc=korsc+matsc+engsc;
-        double avrsc=totsc/3;
-        System.out.print("총점 : ");
-        System.out.println(totsc);
-        System.out.print("평균 : ");
-        System.out.println(avrsc);
+        // Scanner sc = new Scanner(System.in);
+        // System.out.print("국어 : ");
+        // double korsc = sc.nextInt();
+        // System.out.print(korsc);
+        // System.out.print("수학 : ");
+        // double matsc = sc.nextInt();
+        // System.out.print(matsc);
+        // System.out.print("영어 : ");
+        // double engsc = sc.nextInt();
+        // System.out.print(matsc);
+        // double totsc=korsc+matsc+engsc;
+        // double avrsc=totsc/3;
+        // System.out.print("총점 : ");
+        // System.out.println(totsc);
+        // System.out.print("평균 : ");
+        // System.out.println(avrsc);
     }
 }
 

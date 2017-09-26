@@ -1,45 +1,41 @@
-
-// ver 01
-// -표준 출력장치로 인사 문구 출력하기
+package bitcamp.java100;
 
 
-
-
-public class App {
+public class Project_01{
     
-        import java.util.Scanner;
-    
-        public static void main(String[] args) {
+        public static void main(String[] args) throws Exception{
             
-            int kor=100,eng=100,mat=100,avr=(kor+eng+mat)/3,tot=kor+eng+mat;
+            int kor=100,eng=12,mat=100,tot=kor+eng+mat;
+            float avr=(kor+eng+mat)/3.0f;
+            String name="홍길동"; 
+            
+            System.out.printf("이름 :%s\n", name);
+           // System.out.println(name);
+            System.out.printf("국어 : %d\n", kor);
+           // System.out.println(kor);
+            System.out.printf("영어 : %d\n", eng);
+           // System.out.println(eng);
+            System.out.printf("수학 : %d\n", mat);
+           // System.out.println(mat);
+            System.out.printf("총점 : %d\n", tot);
+            //System.out.println(tot);
+            System.out.printf("평점 : %.1f\n", avr);
+            //System.out.println(avr);
         
-            System.out.print("이름 : ");
-            System.out.println("홍길동");
-            System.out.print("국어 : ");
-            System.out.println(100);
-            System.out.print("영어 : ");
-            System.out.println(100);
-            System.out.print("수학 : ");
-            System.out.println(100);
-            System.out.print("총점 : ");
-            System.out.println(300);
-            System.out.print("평점 : ");
-            System.out.println(100.0);
+            int i;
+            String[] names ={"홍길동","이승서","김길동"};
+            //print()
+            //=> 출력한 이후에 줄바꿈 기호가 붙지 않는다
+            for(i=0;i<3;i++){
+             System.out.printf("이름 : %s\n", names[i]);
+         
+                        
             
+         }
             
-            System.out.print("이름 : ");
-            System.out.println("홍길동");
-            System.out.print("국어 : ");
-            System.out.println(kor);
-            System.out.print("영어 : ");
-            System.out.println(eng);
-            System.out.print("수학 : ");
-            System.out.println(mat);
-            System.out.print("총점 : ");
-            System.out.println(tot);
-            System.out.print("평점 : ");
-            System.out.println(avr);
             /*
+
+
             Scanner sc = new Scanner(System.in);
             System.out.print("국어 : ");
             double korsc = sc.nextInt();
@@ -56,8 +52,9 @@ public class App {
             System.out.println(totsc);
             System.out.print("평균 : ");
             System.out.println(avrsc);*/
-        }
-    }
+     }
+    
+}
     
     
     /*
