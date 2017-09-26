@@ -1,0 +1,18 @@
+// 일렉트론은 자바로 윈도우 어플리케이션을 만듬
+
+> npm install -g electron  
+
+electron.aton.io = 다운로드 받고 설치 
+
+
+
+라이센스 apache = MIT = 돈안내고 공개도 안해도되는 라이센스
+	 GPL = 모든걸 공개해야 하는 라이센스
+	LGPL = 모든것을 공개할 필요없고 수정부분만 공개하면 되는 라이센스
+
+nodeJS = 자바를 이용하여 html css javascript만으로 웹어플리케이션 등을 만들려고 만듬
+윈도우 프로그래밍 서버프로그래밍 nodejs를 이용해 javascrit를 씀
+
+
+webassembly = 웹상에 중간어처럼 만들어 웹상에서 기계어를 바로바로 실행시킴
+
