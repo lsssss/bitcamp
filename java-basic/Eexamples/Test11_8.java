@@ -1,7 +1,7 @@
 // # 자바에서 값 표현(literal)하기 - 메모리에서 부동 소수점 저장하는 방법
 package bitcamp.java100;
 
-public class Test11_8_20170926{
+public class Test11_8{
 
     public static void main(String[] args) {
 // 고정 소수점의 값을 표현하는 방법
