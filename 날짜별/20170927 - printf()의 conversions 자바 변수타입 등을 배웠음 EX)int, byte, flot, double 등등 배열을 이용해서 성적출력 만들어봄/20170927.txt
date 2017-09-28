@@ -1,0 +1,47 @@
+Script
+-python,javascript,php 등
+
+language
+-c,c++,java 등
+
+cmd
+>jshell
+>exit
+
+>node
+
+https://opentutorials.org/module/516/5326
+
+
+
+conversion 사용법
+%s : 문자열
+%c : 문자 = 유니코드값을 가져온다 
+%d : 10진수의 숫자
+%o : 8진수
+%h : 16진수
+%f : 부동소수점 숫자
+%b : boolean 값
+%T : 날짜 date/Time
+%n : 줄바꿈 
+
+// printf(): 특정 형식의 문자열을 만들어 출력한다.
+// => 형식
+//    %[argument_index$][flags][width][.precision]conversion
+
+
+자바 원시 타입의 메모리 준비하기 
+
+  byte b;   //정수를 저장할 1바이트 크기의 메모리 준비
+  short s;  //정수를 저장할 2바이트 크기의 메모리 준비
+  int i;    //정수를 저장할 4바이트 크기의 메모리 준비
+  long l;   //정수를 저장할 8바이트 크기의 메모리 준비
+  float f;  //부동소수점을 저장할 4바이트 크기의 메모리 준비
+  double d; //부동소수점을 저장할 8바이트 크기의 메모리 준비
+  boolean bool; //논리 값을 저장할 4바이트 크기의 메모리 준비
+  char c; //유니코드 값을 저장할 2바이트 크기의 메모리 준비
+
+
+
+
+메모리를 준비할때 어떤 종류의 값을 저장할 것인지 지정해야 한다.
