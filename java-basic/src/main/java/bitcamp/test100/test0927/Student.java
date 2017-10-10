@@ -1,4 +1,4 @@
-package bitcamp.test100;
+package bitcamp.test100.test0927;
 
 class Student{ 
   String name;
@@ -13,7 +13,7 @@ Student(String name,int kor,int eng,int math){
 }
 
 public static void print(Student s){
- System.out.printf("%s, %d, %d, %d,%d ,%.1f\n",s.name,s.scores[0],s.scores[1],s.scores[2], s.total, s.aver);
+ System.out.printf("%s, %d, %d, %d,%d ,%.1f\n",s.name,s.scores[0],s.scores[1],s.scores[2], s.total, s.aver);  
 }
 
 }

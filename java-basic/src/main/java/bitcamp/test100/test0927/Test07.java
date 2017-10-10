@@ -1,4 +1,4 @@
-package bitcamp.test100;
+package bitcamp.test100.test0927;
 
 public class Test07{
    public static void main(String[] args){
@@ -8,7 +8,7 @@ public class Test07{
   arr1[1] =20;
   arr1[2] =30;
 
-  System.out.printf("%d, %d, %d\n", arr1[0],arr1[1],arr1[2]);
+  System.out.printf("%d, %d, %d\n", arr1[0],arr1[1],arr1[2]);  
 
   byte[] arr2 = new byte[]{40,50,60};
   System.out.printf("%d, %d, %d\n", arr2[0],arr2[1],arr2[2]);

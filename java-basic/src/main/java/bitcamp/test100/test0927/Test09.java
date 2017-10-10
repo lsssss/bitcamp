@@ -1,5 +1,5 @@
 /* 변수 선언: 2차원 배열 변수와 레퍼런스 */
-package bitcamp.test100;
+package bitcamp.test100.test0927;  
 
 public class Test09 {
   public static void main(String[] args) {

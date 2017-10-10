@@ -9,7 +9,7 @@ public class Test0928_3{
     public static void main(String[] args){
 
         class Stusc{
-            String name;
+            String name;  
             int mat;
             int kor;
             int eng;

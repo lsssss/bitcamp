@@ -1,5 +1,5 @@
 /* 변수 선언: 2차원 배열의 초기화 */
-package bitcamp.test100;
+package bitcamp.test100.test0927;
 
 public class Test10 {
   public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Test10 {
       System.out.println();
     }
     
-  }
+  }  
 
 }
 

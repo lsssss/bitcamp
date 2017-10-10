@@ -9,7 +9,7 @@ public class Test0928_1{
         int[] scores3;
         scores3 = new int[]{300,300,300,300};
 
-        int[] scores4 = new int[4];
+        int[] scores4 = new int[4];  
         scores4[0] = 400;
         scores4[1] = 400;
         scores4[2] = 400;

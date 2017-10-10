@@ -54,7 +54,7 @@ public class Practice0928_1 {
         int k = 10;
 
         x = ++k;
-        System.out.printf("i = %d, x = %d\n", k, x);
+        System.out.printf("i = %d, x = %d\n", k, x);  
 
         k = 10;
 
