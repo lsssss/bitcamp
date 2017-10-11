@@ -8,51 +8,35 @@ public class Test15_11_2 {
 // 저장할 정보 -디렉토리여부, 소유주/그룹/기타 사용자의 사용권한(읽기,쓰기,실행 권한 정보)
 // 1. 클래스 이용해서 만들기     	
     	
-    	class Privilege{
-    		boolean isDir;
-    		boolean ownerRead;
-    		boolean ownerWrite;
-    		boolean ownerExe;
-    		boolean groupRead;
-    		boolean groupWrite;
-    		boolean groupExe;
-    		boolean otherRead;
-    		boolean otherWrite;
-    		boolean otherExe;
-    	}
-    	
-    	Privilege p1 = new Privilege();
-    	
-    	p1.isDir = false;
-    	p1.ownerRead = true;
-    	p1.ownerWrite = true;
-    	p1.ownerExe = true;
-    	p1.groupRead = true;
-    	p1.groupWrite = false;
-    	p1.groupExe = true;
-    	p1.otherRead = true;
-    	p1.otherWrite = false;
-    	p1.otherExe = true;
-    	
-    	
-    	System.out.print(p1.isDir ? "d " : "_ ");
-       	System.out.print(p1.ownerRead ? "r " : "_ ");
-       	System.out.print(p1.ownerWrite ? "w " : "_ ");
-       	System.out.print(p1.ownerExe ? "x " : "_ ");
-       	System.out.print(p1.groupRead ? "r " : "_ ");
-       	System.out.print(p1.groupWrite ? "w " : "_ ");
-       	System.out.print(p1.groupExe ? "x " : "_ ");
-       	System.out.print(p1.otherRead ? "r " : "_ ");
-       	System.out.print(p1.otherWrite ? "w " : "_ ");
-       	System.out.print(p1.otherExe ? "x " : "_ ");
-       	
-       	
-//    	if(p1.isDir) {
-//    		System.out.println("d");
-//    	}else {
-//    		System.out.println("_");
-//    	}
-    	
+    		int[] a = {1,1,1,1,1,0,1,1,0,1};
+    		// 1 4 7
+    		// 2 5 8
+    		// 3 6 9
+    		
+    		for(int i=0; i < a.length ; i++) {
+    			if(a[i] == 1 && i == 0) 
+    				System.out.print("d");
+    			else if(a[i] == 0 && i == 0)
+    				System.out.print("_");
+    			else if(a[i] == 1 && (i+3) %3 ==1 )
+    				System.out.print("r");
+    			else if(a[i] == 0 && (i+3) %3 ==1 )
+    				System.out.print("_");
+    			else if(a[i] == 1 && (i+3) %3 ==2 )
+    				System.out.print("w");
+    			else if(a[i] == 0 && (i+3) %3 ==2 )
+    				System.out.print("_");
+    			else if(a[i] == 1 && i %3 == 0 )
+    				System.out.print("x");
+    			else if(a[i] == 0 && i %3 == 0 )
+    				System.out.print("_");
+    			else System.out.print("h");	
+    		}
+  	
+    		
+    		
+    		 
+    		
     }
 }
 

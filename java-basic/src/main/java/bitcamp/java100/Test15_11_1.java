@@ -45,7 +45,7 @@ public class Test15_11_1 {
        	System.out.print(p1.otherRead ? "r " : "_ ");
        	System.out.print(p1.otherWrite ? "w " : "_ ");
        	System.out.print(p1.otherExe ? "x " : "_ ");
-       	
+   
        	
 //    	if(p1.isDir) {
 //    		System.out.println("d");
