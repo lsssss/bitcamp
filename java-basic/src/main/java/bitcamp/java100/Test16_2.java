@@ -7,7 +7,7 @@ package bitcamp.java100;
 public class Test16_2 {
 
     public static void main(String[] args) {
-        // 조건문은 조건에 따라 실행을 분기시킬 때 사용하는 문법이다.
+    	// 조건문은 조건에 따라 실행을 분기시킬 때 사용하는 문법이다.
         // 
         // > if (조건) 명령문1; else 명령문2;
         // 조건이 참이면 명령문1을 실행하고 거짓이면 명령문2를 실행한다.
@@ -200,7 +200,6 @@ public class Test16_2 {
         } else {
             System.out.println("노인");
         }
-        
     }
 }
 

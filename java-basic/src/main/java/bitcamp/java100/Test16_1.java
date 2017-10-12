@@ -9,9 +9,8 @@ package bitcamp.java100;
 public class Test16_1 {
 
     public static void main(String[] args) {
-        int a = 100;
-        
-        // => 블록을 만드는 방법
+    	int a =100;
+    	  // => 블록을 만드는 방법
         {
             // => 바깥 블록에 선언된 변수와 같은 이름으로 또 다시 변수를 만들 수 없다.
             //int a = 200; // 컴파일 오류!
