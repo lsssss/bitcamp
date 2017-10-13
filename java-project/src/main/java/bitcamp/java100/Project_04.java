@@ -2,17 +2,51 @@ package bitcamp.java100;
 
 public class Project_04 {
 
-    public static void main(String[] args) throws Exception {
-        String[] name1 = { "홍길동","임꺽정","유관순"}; 
-        int[] kor = { 100, 80, 100 };
-        int[] mat = { 90, 80, 100 };
-        int[] eng = { 80, 80, 100 };
+    public static void main(String[] args){
+    	// 학생의 성적을 저장할 때 사용할 사용자 정의 데이터 타입을 만든다.
+    	class Score{
+    		String name;
+    		int kor;
+    		int mat;
+    		int eng;
+    		int sum;
+    		float avr;
+    		
+    		void compute(){
+    			sum = kor+mat+eng;
+    			avr = sum/3.0f;
+    		}
+    		
+    	}
+    	
+    	Score s1 = new Score();
+    	Score s2 = new Score();
+    	Score s3 = new Score();
+    	s1.name ="홍길동";
+    	s1.kor = 100;
+    	s1.mat = 90;
+    	s1.eng = 80;
+    	s1.compute();
+    	
+    	s2.name ="임꺽정";
+    	s2.kor = 80;
+    	s2.mat = 80;
+    	s2.eng = 80;
+    	s2.compute();
+    	
+    	s3.name ="유관순";
+    	s3.kor = 100;
+    	s3.mat = 100;
+    	s3.eng = 100;
+    	s3.compute();
+    	
+    	 System.out.printf("%s,%d,%d,%d,%d,%f\n", 
+                 s1.name, s1.kor, s1.eng, s1.mat, s1.sum, s1.avr);
+    	 System.out.printf("%s,%d,%d,%d,%d,%f\n", 
+                 s2.name, s2.kor, s2.eng, s2.mat, s2.sum, s2.avr);
+         System.out.printf("%s,%d,%d,%d,%d,%f\n", 
+                 s3.name, s3.kor, s3.eng, s3.mat, s3.sum, s3.avr);
 
-        for (int i = 0; i < 6; i++) {
-            int sum = kor[i] + mat[i] + eng[i];
-            double avr = sum / 3.0f;
-            System.out.printf("%-4s : %4d,%4d,%4d,%4d,%6.1f\n", name1[i], kor[i], mat[i], eng[i], sum, avr);
-        }
 
     }
 }

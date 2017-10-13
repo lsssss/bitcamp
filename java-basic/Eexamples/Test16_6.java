@@ -1,10 +1,13 @@
+// ## 문장(Statement) - 반복문 for
+// - for 문 사용법을 알아보자!
+//
+
 package bitcamp.java100;
 
 public class Test16_6 {
 
-	public static void main(String[] args) {
-
-		 // => for 기본 문법
+    public static void main(String[] args) {
+        // => for 기본 문법
         // - for(변수 선언 및 초기화; 조건; 증가문) 명령문;
         for (int i = 0; i < 5; i++) 
             System.out.println(i);
@@ -132,105 +135,20 @@ public class Test16_6 {
         System.out.println();
         
         System.out.println("------------------");
-		
-
-//		for (int i = 0; i < 5; i++) {
-//
-//			for (int j = 0; j < 5 - i; j++) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
-//
-//		System.out.println("------------------------------");
-//
-//		for (int i = 5; i >= 1; i--) {
-//
-//			for (int j = 0; j < i - 1; j++) {
-//				System.out.print(" ");
-//			}
-//			for (int k = 0; k < 6 - i; k++) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
-//
-//		System.out.println("------------------------------");
-//
-//		for (int i = 0; i < 5; i++) {
-//			for (int j = 0; j <= i; j++) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
-//
-//		System.out.println("------------------------------");
-//
-//		for (int i = 6; i >= 1; i--) {
-//
-//			for (int j = 0; j < 6 - i; j++) {
-//				System.out.print(" ");
-//			}
-//
-//			for (int k = 0; k < i - 1; k++) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
-//
-//		System.out.println("------------------------------");
-//
-//		for (int i = 2; i <= 9; i++) {
-//			for (int k = 1; k <= 9; k++) {
-//				System.out.printf("%d" + "*" + "%d" + "=" + "%d\n", i, k, i * k);
-//			}
-//			System.out.println();
-//		}
-//
-//		System.out.println("------------------------------");
-//
-//		for (int i = 1; i <= 9; i++) {
-//			for (int k = 2; k <= 9; k++) {
-//				System.out.printf("%d" + "*" + "%d" + "=" + "%2d" + " ", k, i, i * k);
-//			}
-//			System.out.println();
-//		}
-//
-//		int num = 3;
-//		for (int i = 0; i < num; i++) {
-//
-//			for (int j = 1; j < num - i; j++) {
-//				System.out.print(" ");
-//			}
-//			for (int k = 0; k < i * 2 + 1; k++) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
-//
-//		System.out.println("===========================");
-//
-//		for (int i = num; i > 0; i--) {
-//
-//			for (int j = num - i; j > 0; j--) {
-//				System.out.print(" ");
-//			}
-//			for (int k = i * 2 - 1; k > 0; k--) {
-//				System.out.print("*");
-//			}
-//			System.out.println();
-//		}
-
-
-	}
+        
+    }
 }
 
-// ## 문장(Statement) - 조건문 if
-// - 조건문의 용도와 if 문 사용법을 알아보자!
-//
 
-// *****
-// ****
-// ***
-// **
-// *
+
+
+
+
+
+
+
+
+
+
+
+

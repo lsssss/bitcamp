@@ -3,7 +3,7 @@ package bitcamp.java100;
 
 public class Project_01{
     
-        public static void main(String[] args) throws Exception{
+        public static void main(String[] args){
             
             int kor=100,eng=12,mat=100,tot=kor+eng+mat;
             float avr=(kor+eng+mat)/3.0f;
