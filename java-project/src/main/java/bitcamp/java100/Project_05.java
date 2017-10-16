@@ -14,7 +14,7 @@ public class Project_05 {
 				
 			}
 			
-			void tot(synchronized){
+			void tot(){
 				for(int i=0; i < sub.length ; i++) {
 					sum+=sub[i];
 					aver= sum/sub.length;
