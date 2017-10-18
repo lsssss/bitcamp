@@ -17,7 +17,8 @@ public class Practice1016_1 {
 		Score.catinit(cat[2],csc);
 		Score.catinit(cat[3],csc);
 		Score.catinit(cat[4],csc);
-	
+		csc.close();
+		
 		
 		for(Score css : cat ) {
 			Score.catprint(css);

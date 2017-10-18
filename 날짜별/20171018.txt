@@ -1,0 +1,1 @@
+ 패키지에 포함된 클래스파일 실행 방법 java -cp ./bin bitcamp.java100.Test21_5
