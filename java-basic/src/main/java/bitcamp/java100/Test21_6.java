@@ -52,24 +52,6 @@ public class Test21_6 {
 			}
 			System.out.printf("%s = %d\n", s4[i], cnt);
 		}
-
-		System.out.print("정수 입력 : ");
-		long kk = Long.parseLong(console.readLine());
-
-		int[] cnt = new int[10];
-
-		while (kk > 0) {
-			cnt[(int)(kk % 10)]++;
-			kk /= 10;
-		}
-
-		int x = 0;
-		while (x < cnt.length) {
-			System.out.printf("%d = %d\n", x, cnt[x]);
-			x++;
-		}
-		
-
 	}
 }
 	//

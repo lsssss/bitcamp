@@ -1,4 +1,4 @@
-package bitcamp.java100;
+package bitcamp.practice100.practice1019;
 
 import java.io.Console;
 
@@ -32,7 +32,7 @@ public class Test21_8 {
 		String yn;
 		String save;
 
-		for (int k = 0; k < pf.length; k++) {
+		for (int k = 0; k <= pf.length; k++) {
 
 			yn = console.readLine("입력 하시겠습니까? ex)y or n :");
 			if (yn.equals("y")) {

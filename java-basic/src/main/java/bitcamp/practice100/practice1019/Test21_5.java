@@ -16,7 +16,7 @@
 // 다음에 또 봐요!
 // > 
 
-package bitcamp.java100;
+package bitcamp.practice100.practice1019;
 
 import java.io.Console;
 
@@ -30,19 +30,20 @@ public class Test21_5 {
 			System.err.println("콘솔을 지원하지 않습니다.");
 			System.exit(1);
 		}
+		
 
-
-		while (true) {
+		
+		while(true) {
 			int k = Integer.parseInt(console.readLine("구구단 ? : "));
-			if (k == 1 || k>= 10) {
-				System.out.println("2~9단만 입력 하세요");
-			} else if (k <= 0) {
-				System.out.println("종료 합니다");
+			if( k == 1|| k>=10) {
+				System.out.println("2~9단만 입력..");
+			}else if( k<=0) {
+				System.out.println("조오오옹료");
 				break;
-			} else {
-				for (int i = 1; i <= 9; i++) {
-					int gop = i * k;
-					System.out.printf("%d*%d = %d\n", k, i, gop);
+			}else {
+				for(int i = 1; i<=9; i++) {
+					int gop = i*k;
+					System.out.printf("%d * %d = %d",i,k,gop);
 				}
 			}
 		}
