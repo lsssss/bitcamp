@@ -20,13 +20,38 @@ public class Test21_7 {
             System.err.println("콘솔을 지원하지 않습니다.");
             System.exit(1); // JVM을 종료한다.
         }
-        System.out.print(" 문자를 반대로 출력합니다 문자를 입력하세요 : ");
-        String s = console.readLine();
-        for(int i = s.length() -1 ; i >=0 ;i-- ) {
-        	System.out.print(s.charAt(i));
+        
+        String str = console.readLine("문자열 ? : ");
+        StringBuffer buf = new StringBuffer();
+        buf.append(str);
+        
+        int len = buf.length() /2;
+        
+        for(int left =0 , right = buf.length() -  1; left < len; left++, right--) {
+        	char ch = buf.charAt(left);
+        	buf.setCharAt(left, buf.charAt(right));
+        	buf.setCharAt(right,  ch);
         }
         
+        System.out.printf("입력 문자열 : %s\n", str);
+        System.out.printf("변경 문자열 : %s\n", str);
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        System.out.print(" 문자를 반대로 출력합니다 문자를 입력하세요 : ");
+//        String s = console.readLine();
+//        for(int i = s.length() -1 ; i >=0 ;i-- ) {
+//        	System.out.print(s.charAt(i));
+//        }
+//        
+//        
     }
 }
 

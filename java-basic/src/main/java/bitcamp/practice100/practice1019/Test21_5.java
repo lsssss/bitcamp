@@ -35,7 +35,7 @@ public class Test21_5 {
 		
 		while(true) {
 			int k = Integer.parseInt(console.readLine("구구단 ? : "));
-			if( k == 1|| k>=10) {
+			if( k == 1 || k>=10) {
 				System.out.println("2~9단만 입력..");
 			}else if( k<=0) {
 				System.out.println("조오오옹료");

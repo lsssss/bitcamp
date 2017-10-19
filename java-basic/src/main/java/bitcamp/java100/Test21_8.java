@@ -16,7 +16,7 @@ public class Test21_8 {
 		k.email = con.readLine("이메일 ? :  ");
 		k.phonenum = con.readLine("번호 ? :  ");
 	}
-
+	
 	public static void main(String[] args) {
 		Console console = System.console();
 		if (console == null) {

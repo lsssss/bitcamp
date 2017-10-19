@@ -12,22 +12,23 @@ public class Test21_6 {
 			System.err.println("콘솔을 지원하지 않습니다.");
 			System.exit(1); // JVM을 종료한다.
 		}
-		String s = console.readLine("갯수를 구하고 싶은 정수 or 문자 입력 :");
-		String[] s2 = s.split(",");
-		String s3 = console.readLine("정수를 입력 하세요 : ");
-		String[] s4 = s.split("");
-
-		// String[] s3 = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-
-		for (int i = 0; i < s2.length; i++) {
+		
+		String st1 = console.readLine("문자열 or 숫자 입력하세요 ex) a,b,c,1,2,3,... : ");
+		String[] star1 = st1.split(",");
+		String st2 = console.readLine("정수를 입력하세요 : ");
+		String[] star2 = st2.split("");
+		
+		for(int i = 0 ; i < star1.length ; i ++) {
 			int cnt = 0;
-			for (int j = 0; j < s4.length; j++) {
-				if(s2[i].compareTo(s4[j])==0) {
-					cnt+=1;
-				}else;
+			for(int j = 0 ; j < star2.length ; j++) {
+				if(star1[i].compareTo(star2[j])== 0 ) {
+					cnt += 1;
+				}else ;
+				
 			}
-			System.out.printf("%s = %d\n",s4[i], cnt);
+			System.out.printf("%s = %d\n" , star1[i], cnt);
 		}
+
 	}
 
 }
