@@ -36,15 +36,6 @@ public class Test21_7 {
         System.out.printf("입력 문자열 : %s\n", str);
         System.out.printf("변경 문자열 : %s\n", str);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
 //        System.out.print(" 문자를 반대로 출력합니다 문자를 입력하세요 : ");
 //        String s = console.readLine();
 //        for(int i = s.length() -1 ; i >=0 ;i-- ) {
