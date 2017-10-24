@@ -52,7 +52,9 @@ public class Test1 {
 
 
 
-
+/// Method Area = 클래스변수
+/// stack = 지역변수
+/// heap = 인스턴스 변수
 
 
 
