@@ -42,15 +42,15 @@ public class College {
 
 	void printStudent() {
 		switch(this.department) {
-		case "DPT_1" : System.out.printf("%s,%s,%s,%d,%s,%d,%f", this.name, this.addr, this.phone, this.age, this.DPT_1,
+		case "DPT_1" : System.out.printf("%s,%s,%s,%d,%s,%d,%f\n", this.name, this.addr, this.phone, this.age, this.DPT_1,
 		        this.studentId, this.score); break;
-		case "DPT_2" : System.out.printf("%s,%s,%s,%d,%s,%d,%f", this.name, this.addr, this.phone, this.age, this.DPT_2,
+		case "DPT_2" : System.out.printf("%s,%s,%s,%d,%s,%d,%f\n", this.name, this.addr, this.phone, this.age, this.DPT_2,
 		        this.studentId, this.score); break;
-		case "DPT_3" :System.out.printf("%s,%s,%s,%d,%s,%d,%f", this.name, this.addr, this.phone, this.age, this.DPT_3,
+		case "DPT_3" :System.out.printf("%s,%s,%s,%d,%s,%d,%f\n", this.name, this.addr, this.phone, this.age, this.DPT_3,
 		        this.studentId, this.score); break;
-		case "DPT_4" :System.out.printf("%s,%s,%s,%d,%s,%d,%f", this.name, this.addr, this.phone, this.age, this.DPT_4,
+		case "DPT_4" :System.out.printf("%s,%s,%s,%d,%s,%d,%f\n", this.name, this.addr, this.phone, this.age, this.DPT_4,
 		        this.studentId, this.score); break;
-		case "DPT_5" :System.out.printf("%s,%s,%s,%d,%d,%d,%d", this.name, this.addr, this.phone, this.age, this.DPT_5,
+		case "DPT_5" :System.out.printf("%s,%s,%s,%d,%d,%d,%d\n", this.name, this.addr, this.phone, this.age, this.DPT_5,
 		        this.studentId, this.score); break;
 		}
 	}
