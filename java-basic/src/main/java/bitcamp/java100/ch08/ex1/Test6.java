@@ -20,16 +20,12 @@ public class Test6 {
     // 중첩 클래스도 클래스의 멤버로 보기 때문에
     // 변수나 메서드처럼 모든 접근 범위를 가질 수 있다.
     private class X4 {
-    	int x4 = 10;
     }
     class X5 {
-    	int x5 = 20;
     }
     protected class X6 {
-    	int x6 = 30;
     }
     public class X7 {
-    	int x7 = 40;
     }
     
     public static void main(String[] args) {

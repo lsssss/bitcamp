@@ -24,14 +24,13 @@ public class App {
         }
         
         //: 학생의 성적을 저장할 메모리를 준비한다.
-        /*
         Score[] scores = new Score[3];
         scores[0] = new Score();
         scores[1] = new Score();
         scores[2] = new Score();
-        */
+ 
         
-        Score[] scores = {new Score(), new Score(), new Score()};
+        //Score[] scores = {new Score(), new Score(), new Score()};
         
         scores[0].name = "홍길동";
         scores[0].subjects[0] = 100;
