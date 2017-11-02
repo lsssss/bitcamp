@@ -2,8 +2,7 @@
 //: - 모든 필드에 대해 외부 접근을 차단한다.
 //:   단 자식 클래스에서는 직접 접근할 수 있게 허락한다.
 //: 
-
-import java.util.ArrayList;
+package java100.app;
 import java.util.Scanner;
 
 public class Score {  
@@ -12,7 +11,7 @@ public class Score {
     protected int[] subjects; 
     protected int sum;
     protected float aver;
-    
+
     //: ### 생성자
     //: > 다른 패키지에서도 호출할 수 있도록 public으로 공개한다.
     public Score() {
@@ -62,5 +61,4 @@ public class Score {
         
         this.compute();
     }
-    
 }

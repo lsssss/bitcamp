@@ -76,12 +76,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
  
-// 9단계:
-// => 성적 변경 기능 중에서 사용자가 점수를 입력할 때
-//    엔터를 입력하거나 숫자가 아닌 값을 입력할 경우 
-//    예외 처리한다.
-//    Score 클래스의 update()
-public class App {
+// 7단계:
+// => 성적 변경 기능 중 이름으로 찾기 기능 구현
+public class App07 {
     
     static Scanner keyScan = new Scanner(System.in);
     
@@ -185,7 +182,7 @@ public class App {
                 if (score == null) {
                     System.out.printf("'%s'의 성적 정보가 없습니다.\n", name);
                 } else {
-                    score.update();
+                    System.out.println("찾았다!");
                 }
                 
                 break;

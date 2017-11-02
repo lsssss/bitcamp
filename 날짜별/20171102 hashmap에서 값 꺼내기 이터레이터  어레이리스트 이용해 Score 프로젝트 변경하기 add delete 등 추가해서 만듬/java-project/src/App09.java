@@ -81,7 +81,7 @@ import java.util.Scanner;
 //    엔터를 입력하거나 숫자가 아닌 값을 입력할 경우 
 //    예외 처리한다.
 //    Score 클래스의 update()
-public class App {
+public class App09 {
     
     static Scanner keyScan = new Scanner(System.in);
     

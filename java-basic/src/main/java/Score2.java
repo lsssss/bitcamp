@@ -6,20 +6,24 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Score {  
+import bitcamp.java100.ch09.ex6.Contact;
+
+public class Score2 {  
     
     protected String name;
     protected int[] subjects; 
     protected int sum;
     protected float aver;
     
+    
+   
     //: ### 생성자
     //: > 다른 패키지에서도 호출할 수 있도록 public으로 공개한다.
-    public Score() {
+    public Score2() {
         this.subjects = new int[3];
     }
     
-    public Score(String name, int kor, int eng, int math) {
+    public Score2(String name, int kor, int eng, int math) {
         this.name = name;
         this.subjects = new int[]{kor, eng, math};
         
@@ -28,9 +32,11 @@ public class Score {
     
     //: > 내부에서만 사용할 메서드이기 때문에 공개하지 않는다.
     private void compute() {
+    	int sum =0;
         for (int sub : this.subjects) {
-            this.sum += sub;
+            sum += sub;
         } 
+        this.sum =sum;
         this.aver = (float)this.sum / this.subjects.length;
     }
     
@@ -46,8 +52,7 @@ public class Score {
     }
     
     public void input() {
-        Scanner keyScan = new Scanner(System.in);
-        
+    	 Scanner keyScan = new Scanner(System.in);
         System.out.print("이름? ");
         this.name = keyScan.nextLine();
         
@@ -62,5 +67,46 @@ public class Score {
         
         this.compute();
     }
+    public void update() {
+    	 Scanner keyScan = new Scanner(System.in);
+    	 
+    	System.out.printf("국어?(%d)" , this.subjects[0]);
+    	int kor = this.subjects[0];
+    	try {
+    		kor = Integer.parseInt(keyScan.nextLine());
+    	}catch(Exception e) {}
+    	
+    	System.out.printf("영어?(%d)" , this.subjects[1]);
+    	int eng = this.subjects[1];
+    	try {
+    		eng = Integer.parseInt(keyScan.nextLine());
+    	}catch(Exception e) {}
+    	
+    	System.out.printf("수학?(%d)" , this.subjects[2]);
+    	int math = this.subjects[2];
+    	try {
+    		math = Integer.parseInt(keyScan.nextLine());
+    	}catch(Exception e) {}
+    	
+    	if(!confirm2("저장하실겁니까..?")) {
+    		this.subjects[0] = kor;
+    		this.subjects[1] = eng;
+    		this.subjects[2] = math;
+    		this.compute();
+    		System.out.println("변경됨...");
+    	}else {
+    		System.out.println("취소가 되었다....");
+    	}
+    }
+    
+	static boolean confirm2(String message) {
+		System.out.print(message);
+		 Scanner keyScan = new Scanner(System.in);
+		String response = keyScan.nextLine().toLowerCase();
+
+		if (response.equals("n") || response.equals("no") || response.equals(""))
+			return false;
+		return false;
+	}
     
 }
