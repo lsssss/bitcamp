@@ -6,7 +6,7 @@ package bitcamp.java100.ch12.ex3;
 // 한 개라도 빠뜨리면 추상 메서드인채로 존재하기 때문에
 // 추상 메서드를 가질 수 있는 클래스는 추상 클래스만이 가능함으로 
 // 클래스를 추상 클래스로 선언해야 한다.
-
+//
 public abstract class Test1 implements Protocol3 {
 
     @Override

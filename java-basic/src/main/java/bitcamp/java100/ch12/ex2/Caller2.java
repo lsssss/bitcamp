@@ -1,6 +1,7 @@
 // 인터페이스의 구현체를 사용하는 개발자 입장!
 package bitcamp.java100.ch12.ex2;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Caller2 {

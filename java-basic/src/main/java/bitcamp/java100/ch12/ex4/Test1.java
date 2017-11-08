@@ -15,9 +15,6 @@ public class Test1 {
         // => A의 모든 기능을 상속 받았기 때문이다.
         obj = new B();
         
-        obj.m1();
-        obj.m2();
-        
         // instanceof 연산자로 다시 한 번 확인해보자!
         if (new A() instanceof Protocol) {
             System.out.println("A의 객체는 Protocol 구현체이다.");
