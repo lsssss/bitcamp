@@ -15,14 +15,14 @@ public class Test1 {
         //
         FileReader in = null;
         try {
-            in = new FileReader("./build.gradle2");
+            in = new FileReader("./build.gradle");
             System.out.println("파일 읽기 준비 완료!");
             
             int ch;
             while (true) {
                 ch = in.read();
                 if (ch == -1) break;
-                System.out.print((char)ch);
+                System.out.print(ch);
             }
             System.out.println("--------------------------");
             

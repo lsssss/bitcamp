@@ -9,6 +9,7 @@
 // 
 package bitcamp.java100.ch13.ex2;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class Test3 {
