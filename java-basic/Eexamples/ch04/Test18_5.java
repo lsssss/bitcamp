@@ -30,7 +30,7 @@ public class Test18_5 {
         // indexOf(찾을 문자열)
         // > 앞에서 부터 문자열을 찾는다. 찾은 위치(인덱스)를 리턴한다.
         System.out.println(s1.indexOf("BB"));
-        
+        System.out.println(s1.substring(3, 6));
         // lastIndexOf(찾을 문자열)
         // > 뒤에서부터 찾는다. 
         System.out.println(s1.lastIndexOf("BB"));

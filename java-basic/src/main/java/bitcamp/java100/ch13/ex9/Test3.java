@@ -87,7 +87,6 @@ public class Test3 {
             } catch (ScoreOutOfBoundsException e) {
                 System.out.println("점수의 범위를 벗어났습니다.");
                 
-                
             } catch (NumberFormatException e) {
                 System.out.println("숫자 형식이 아닙니다.");
                 

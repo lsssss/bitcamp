@@ -32,15 +32,15 @@ public class Test4 {
             //
             System.out.println("catch 블록 실행");
             
-//        } catch (IOException e) {
-//            // try 블록에서 발생되는 예외 중에서 IOException만 
-//            // 따로 처리하고 싶다면 catch 블록을 분리하라!
-//            // 단, catch 블록의 순서는 다형적 변수를 고려하여 정하라!
-//            // 
-//            // Exception 파라미터는 IOException 객체도 담을 수 있기 때문에
-//            // 이 블록으로 도달 할 수 없다.
-      }
+        } catch (IOException e) {
+            // try 블록에서 발생되는 예외 중에서 IOException만 
+            // 따로 처리하고 싶다면 catch 블록을 분리하라!
+            // 단, catch 블록의 순서는 다형적 변수를 고려하여 정하라!
+            // 
+            // Exception 파라미터는 IOException 객체도 담을 수 있기 때문에
+            // 이 블록으로 도달 할 수 없다.
+        }
 
     }
-   
+
 }

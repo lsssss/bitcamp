@@ -10,7 +10,7 @@ public class Test1 {
         System.out.print("입력> ");
         String str = keyScan.nextLine().toLowerCase();
         
-        try {
+        try { 
             System.out.println("try 블록 실행");
             // try 블록은 예외가 발생할 수 있는 코드를 두는 블록이다.
             // 이 블록에서 예외가 발생하면 catch 블록을 실행한다.
