@@ -1,4 +1,4 @@
-package bitcamp.java100.ch14.ex3;
+ package bitcamp.java100.ch14.ex3;
 
 import java.io.IOException;
 import java.io.InputStream;

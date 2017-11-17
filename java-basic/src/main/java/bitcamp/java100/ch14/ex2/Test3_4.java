@@ -1,4 +1,4 @@
-// Byte 스트림 응용 => 파일 복사하기 - 버퍼 적용 II
+	// Byte 스트림 응용 => 파일 복사하기 - 버퍼 적용 II
 //
 
 package bitcamp.java100.ch14.ex2;
