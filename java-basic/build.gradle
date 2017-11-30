@@ -38,6 +38,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //MySQL DBMS의 JDBC Driver
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.44'
+     //https://mvnrepository.com/artifact/org.reflections/reflections
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+    compile 'org.springframework:spring-context:5.0.2.RELEASE'
+    
 }
 mainClassName = 'App'
 

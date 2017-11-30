@@ -36,6 +36,10 @@ dependencies {
     compile 'com.google.guava:guava:22.0'
     testCompile 'junit:junit:4.12'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.44'
+    // https://mvnrepository.com/artifact/org.reflections/reflections
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+     compile 'org.springframework:spring-context:5.0.2.RELEASE'
+    
 }
 mainClassName = 'App'
 

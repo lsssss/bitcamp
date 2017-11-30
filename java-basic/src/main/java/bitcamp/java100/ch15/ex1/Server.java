@@ -38,7 +38,7 @@ public class Server {
         //
         // 이 프로그램은 서버역할을 하기 때문에 
         // 프로그램에서 어떤 포트를 사용할지 결정해야 한다.
-        ServerSocket ss = new ServerSocket(9999);
+        ServerSocket ss = new ServerSocket(999);
         System.out.println("서버를 실행하였다!");
         
         // 클라이언트의 연결을 기다린다.
