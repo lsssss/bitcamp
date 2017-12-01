@@ -14,7 +14,7 @@ public class Test1_1 {
         //    영어 : 1바이트 --> 2바이트 유니코드
         //    UTF-8: 1 ~ 4바이트 --> 2바이트 유니코드 
         
-        FileReader in = new FileReader("test.txt");
+        FileReader in = new FileReader("test2442.txt");
 
         int b;
         
