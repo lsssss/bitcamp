@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="c1" class="bitcamp.java100.ch20.ex6.CarFactory" factory-method="createCar">
+		<constructor-arg value ="티코 골드"/>
+		</bean>
+		
+		<bean id="c2" class="bitcamp.java100.ch20.ex6.CarFactory" factory-method="createCar">
+		<constructor-arg value ="에쿠스"/>
+		</bean>
+		
+		<bean id="c3" class="bitcamp.java100.ch20.ex6.CarFactory" factory-method="createCar">
+		<constructor-arg value ="소나타"/>
+		</bean>
+		
+		<bean id="c4" class="bitcamp.java100.ch20.ex6.CarFactory" factory-method="createCar">
+		<constructor-arg value ="티코"/>
+		</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

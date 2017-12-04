@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="c1" class="bitcamp.java100.ch20.ex4.Car">
+		<property name="seats">
+			<array>
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="한국타이어" />
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="한국타이어" />
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="금호타이어" />
+			</array>
+		</property>
+	</bean>
+
+	<bean id="c2" class="bitcamp.java100.ch20.ex4.Car">
+		<property name="seats">
+			<list>
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="한국타이어" />
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="한국타이어" />
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="금호타이어" />
+			</list>
+		</property>
+	</bean>
+	
+		<bean id="c3" class="bitcamp.java100.ch20.ex4.Car">
+		<property name="seats">
+			<set>
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="한국타이어" />
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="한국타이어" />
+				<bean class="bitcamp.java100.ch20.ex4.Seat" p:type="금호타이어" />
+			</set>
+		</property>
+	</bean>
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
