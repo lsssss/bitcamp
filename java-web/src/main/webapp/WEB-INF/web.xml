@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="false">
+
+	
+	<servlet>
+		<servlet-name>Servlet03</servlet-name>
+		<servlet-class>step1.Servlet03</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+	<servlet-name>Servlet03</servlet-name>
+	<url-pattern>/step1/Servlet03</url-pattern>
+	</servlet-mapping>
+	
+	
+	<filter>
+		<filter-name>Filter02</filter-name>
+		<filter-class>step3.Filter02</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter02</filter-name>
+		<url-pattern>/step3/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>step3.Listner02</listener-class>
+	</listener>
+	
+	
+</web-app>
