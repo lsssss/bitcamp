@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Basic</title>
+	<script>
+	window.onload = function() {
+	   	alert("모든 콘텐츠를 로딩헀음!");
+	   	var audioTag = document.getElementById("a1");
+	   	audioTag.play();
+	   	
+	   	
+	   	var btnTag = document.getElementById("btn1");
+	   	btnTag.onclick = function(){
+	   	    alert("중지!");
+	   	    audioTag.pause();
+	   	}
+	}	
+	</script>    
+</head>
+<body>
+   
+   <audio id="a1" src="Kalimba.mp3" controls="controls"></audio>
+   <button id ="btn1">중지</button>
+
+</body>
+</html>
