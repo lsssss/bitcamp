@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+pre{
+	
+	border: 3px dashed darkgray;
+	padding: 10px;
+}
+
+pre.jsp{
+	background: lightgray;
+}
+
+pre.java{
+	background: yellow;
+}
