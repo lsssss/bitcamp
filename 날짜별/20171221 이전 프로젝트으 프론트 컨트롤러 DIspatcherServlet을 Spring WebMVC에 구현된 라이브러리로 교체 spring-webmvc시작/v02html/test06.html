@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>HTTP 요청할 떄 "aaa" 헤더를 추가한다.</p>
+<button type="button" onclick="f1()">요청1</button>
+
+<p>HTTP 요청할 떄 "bbb" 헤더를 추가한다.</p>
+<button type="button" onclick="f2()">요청2</button>
+
+<p>HTTP 요청할 떄 "aaa"와"bbb" 헤더를 추가한다.</p>
+<button type="button" onclick="f3()">요청3</button>
+
+<p>HTTP 요청할 떄 헤더를 추가 하지 않는다.</p>
+<button type="button" onclick="f4()">요청4</button>
+
+
+<script>
+function f1(){
+	var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../app/v02/test06',false);
+    xhr.setRequestHeader("aaa","ok");
+    xhr.send();
+    window.alert(xhr.responseText);
+}
+function f2(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../app/v02/test06',false);
+    xhr.setRequestHeader("bbb","ok");
+    xhr.send();
+    window.alert(xhr.responseText);
+}
+function f3(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../app/v02/test06',false);
+    xhr.setRequestHeader("aaa","ok");
+    xhr.setRequestHeader("bbb","ok");
+    xhr.send();
+    window.alert(xhr.responseText);
+}
+
+function f4(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../app/v02/test06',false);
+    xhr.send();
+    window.alert(xhr.responseText);
+}
+
+
+
+</script>
+
+</body>
+</html>

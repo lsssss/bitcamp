@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>웹서버에 text/csv 타입의 값을 보낼 경우</p>
+<button type="button" onclick="f1()">요청1</button>
+
+<p>웹서버에 application/json 타입의 값을 보낼 경우</p>
+<button type="button" onclick="f2()">요청2</button>
+
+<p>일반 POST 요청을 보낼경우 </p>
+<button type="button" onclick="f3()">요청3</button>
+
+<p>순수 텍스트 보내기</p>
+<button type="button" onclick="f4()">요청4</button>
+
+
+<script>
+function f1(){
+	var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../app/v02/test07',false);
+    xhr.setRequestHeader("Content-Type","text/csv");
+    xhr.send("aaa,25,111-1111,aaa@test.com");
+    window.alert(xhr.responseText);
+}
+function f2(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../app/v02/test07',false);
+    xhr.setRequestHeader("Content-Type","application/json");
+   // xhr.send("{\"name\":\"aaaa\",\"age\":20,\"tel\":\"1111-1111\",\"email\":\"aaaa@test.com\"}");
+    var obj ={name: "aaa",age: 20,tel: "111-1111",email: "aaaa@test.com"};
+    var str= JSON.stringify(obj);
+    xhr.send(str);
+    window.alert(xhr.responseText);
+}
+function f3(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../app/v02/test07',false);
+    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    xhr.send("name=aaa&age=20&tel=111-1111&email=211212@email.com");
+    window.alert(xhr.responseText);
+}
+
+function f4(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../app/v02/test07',false);
+    xhr.setRequestHeader("Content-Type","text/plain");
+    xhr.send("hello!");
+    window.alert(xhr.responseText);
+}
+
+
+</script>
+
+</body>
+</html>

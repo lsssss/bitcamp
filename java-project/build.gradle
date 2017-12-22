@@ -50,8 +50,14 @@ dependencies {
     // 이 라이브러리 파일이 내장되어 있기 때문에 또 배포할 필요가 없다.
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
     
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+    
     compile 'com.google.guava:guava:22.0'
     testCompile 'junit:junit:4.12'
+    
+    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.2.RELEASE'
+    
 }
 
 
