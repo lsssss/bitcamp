@@ -1,0 +1,20 @@
+자바9docs
+https://docs.oracle.com/javase/9/docs/api/index.html?overview-summary.html
+
+자바8docs
+https://docs.oracle.com/javase/8/docs/api/
+
+스프링docs
+https://docs.spring.io/spring/docs/5.0.2.RELEASE/spring-framework-reference/
+
+스프링docs api
+https://docs.spring.io/spring/docs/5.0.2.RELEASE/javadoc-api/
+
+html css w3school
+\https://www.w3schools.com/
+
+learn jsp
+https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm
+
+여러 강의 자료 ppt 
+https://www.slideshare.net/
