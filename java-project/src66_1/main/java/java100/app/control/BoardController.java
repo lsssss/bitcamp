@@ -19,7 +19,7 @@ public class BoardController {
     @Autowired
     BoardDao boardDao;
 
-    @RequestMapping("/board/list")
+    @RequestMapping("/board/list.do")
     public String list(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         List<Board> list = boardDao.selectList();

@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,15 +16,16 @@ import java100.app.domain.Board;
 @Controller
 public class BoardController {
 
-    @Autowired
-    BoardDao boardDao;
+    ClassPathXmlApplicationContext iocContainer = new ClassPathXmlApplicationContext("spring/application-context.xml");
+    BoardDao boardDao = iocContainer.getBean(BoardDao.class);
 
+    
     @RequestMapping("/board/list")
     public String list(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        List<Board> list = boardDao.selectList();
+        List<Board> list = boardDao.list();
         request.setAttribute("list", list);
-        return "/board/list.jsp";
+        return "/board/list.do";
     }
 
     @RequestMapping("/board/add")

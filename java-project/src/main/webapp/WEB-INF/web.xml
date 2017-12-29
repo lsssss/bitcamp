@@ -28,7 +28,7 @@
              지정하지 않으면 XmlWebApplicationContext가 사용된다.
          -->
         <init-param>
-            <param-name>contextClass</param-name>
+            <param-name>contextConfigLocation</param-name>
             <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
         </init-param>
         

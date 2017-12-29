@@ -9,7 +9,8 @@ import java100.app.domain.Board;
 //=> 그래서 규칙에서 제외했다.
 //=> 이 규칙은 BoardController가 호출하는 규칙이다.
 public interface BoardDao {
-    List<Board> selectList();
+    
+    List<Board> findAll();
     int insert(Board board);
     int update(Board board);
     int delete(int no);
