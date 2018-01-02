@@ -1,6 +1,7 @@
 package java100.app.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import java100.app.domain.Member;
 
@@ -10,11 +11,11 @@ import java100.app.domain.Member;
 //=> 이 규칙은 MemberController가 호출하는 규칙이다.
 //
 public interface MemberDao {
-    List<Member> selectList();
+    List<Member> findAll(Map<String,Object> params);
     int insert(Member member);
     int update(Member member);
     int delete(int no);
-    Member selectOne(int no);
+    Member findByNo(int no);
 }
 
 

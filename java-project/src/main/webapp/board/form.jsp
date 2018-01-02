@@ -6,14 +6,14 @@
 <head>
 <title>게시물</title>
 <link rel='stylesheet'
-	href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
-<link rel='stylesheet' href='../css/common.css'>
+	href='../../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='../../css/common.css'>
 </head>
 <body>
 <div class='container'>
 <jsp:include page="/header.jsp"/>
 <h1>게시물 상세 정보</h1>
-<form action='add.do' method='post'>
+<form action='add' method='post'>
 <div class='form-group row'>
 <label for='math' class='col-sm-2 col-form-label'>제목</label>
 <div class='col-sm-10'>

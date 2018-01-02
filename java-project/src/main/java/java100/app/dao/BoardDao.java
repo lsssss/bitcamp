@@ -1,6 +1,7 @@
 package java100.app.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import java100.app.domain.Board;
 
@@ -9,12 +10,12 @@ import java100.app.domain.Board;
 //=> 그래서 규칙에서 제외했다.
 //=> 이 규칙은 BoardController가 호출하는 규칙이다.
 public interface BoardDao {
-    
-    List<Board> findAll();
+    List<Board> findAll(Map<String,Object> params);
     int insert(Board board);
     int update(Board board);
     int delete(int no);
-    Board selectOne(int no);
+    Board findByNo(int no);
+    int updateViewCount(int no);
 }
 
 

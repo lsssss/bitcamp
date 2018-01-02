@@ -8,8 +8,8 @@
 <html>
 <head>
 <title>게시판</title>
-<link rel='stylesheet' href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
-<link rel='stylesheet' href='../css/common.css'>
+<link rel='stylesheet' href='../../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='../../css/common.css'>
 </head>
 <body>
 <div class='container'>
@@ -18,7 +18,14 @@
 
 <h1>게시물 목록</h1>
 
-<p><a href='form.do' class='btn btn-primary btn-sm'>추가</a></p>
+<div class="toolbar" style ="float: right">
+<form action="list" method="get" class="searchbox">
+<input type="text" name="word">
+<button>검색</button>
+</form>
+</div>
+
+<p><a href='form' class='btn btn-primary btn-sm'>추가</a></p>
 
 <table class='table table-hover'>
 <thead>
@@ -31,7 +38,7 @@
 <c:forEach items="${list}" var="board">
         <tr>
         <td>${board.no}</td>
-        <td><a href='view.do?no=${board.no}'>${board.title}</a></td>
+        <td><a href='${board.no}'>${board.title}</a></td>
         <td>${board.regDate}</td>
         <td>${board.viewCount}</td>
         </tr>

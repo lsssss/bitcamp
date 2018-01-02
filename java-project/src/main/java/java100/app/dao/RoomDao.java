@@ -1,6 +1,7 @@
 package java100.app.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import java100.app.domain.Room;
 
@@ -10,7 +11,7 @@ import java100.app.domain.Room;
 //=> 이 규칙은 RoomController가 호출하는 규칙이다.
 //
 public interface RoomDao {
-    List<Room> selectList();
+    List<Room> findAll(Map<String,Object> params);
     int insert(Room room);
     int delete(int no);
 }

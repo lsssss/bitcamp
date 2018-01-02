@@ -8,8 +8,8 @@
 <head>
 <title>강의실관리</title>
 <link rel='stylesheet'
-	href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
-<link rel='stylesheet' href='../css/common.css'>
+	href='../../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='../../css/common.css'>
 </head>
 <body>
 	<div class='container'>
@@ -17,9 +17,16 @@
 		<jsp:include page="/header.jsp" />
 
 		<h1>강의실 목록</h1>
+		<div class="toolbar" style="float: right">
+			<form action="list" method="get" class="searchbox">
+				<input type="text" name="nm">
+				<button>검색</button>
+			</form>
+		</div>
+
 
 		<p>
-			<a href='form.do' class='btn btn-primary btn-sm'>추가</a>
+			<a href='form' class='btn btn-primary btn-sm'>추가</a>
 		</p>
 
 		<table class='table table-hover'>
@@ -34,15 +41,16 @@
 			</thead>
 			<tbody>
 
-				<c:forEach items ="${list}" var="room">
-				<tr>
-					<td>${room.no}</td>
-					<td>${room.location}</td>
-					<td>${room.name}</td>
-					<td>${room.capacity}</td>
-					<td><a href='delete.do?no=${room.no}' class='btn btn-danger btn-sm'>삭제</a></td>
-				</tr>
-			</c:forEach>
+				<c:forEach items="${list}" var="room">
+					<tr>
+						<td>${room.no}</td>
+						<td>${room.location}</td>
+						<td>${room.name}</td>
+						<td>${room.capacity}</td>
+						<td><a href='delete?no=${room.no}'
+							class='btn btn-danger btn-sm'>삭제</a></td>
+					</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 

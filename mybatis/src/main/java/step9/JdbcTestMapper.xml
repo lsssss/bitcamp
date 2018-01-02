@@ -9,9 +9,8 @@
 
 	<resultMap type="board" id="boardMap">
 		<id column="no" property="no" />
-		<result column="conts" property="contents" />
 		<result column="regdt" property="createdDate" />
-		<result column="vwcnt" property="viewCount" />
+		<result column="pwd" property="password" />
 	</resultMap>
 
 	<sql id="select1">

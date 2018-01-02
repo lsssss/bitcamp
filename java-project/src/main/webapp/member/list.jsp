@@ -7,16 +7,21 @@
 <head>
 <title>회원관리</title>
 <link rel='stylesheet'
-	href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
-<link rel='stylesheet' href='../css/common.css'>
+	href='../../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='../../css/common.css'>
 </head>
 <body>
 	<div class='container'>
 		<jsp:include page="/header.jsp" />
 		<h1>회원 목록</h1>
-
+		<div class="toolbar" style="float: right">
+			<form action="list" method="get" class="searchbox">
+				<input type="text" name="word">
+				<button>검색</button>
+			</form>
+		</div>
 		<p>
-			<a href='form.do' class='btn btn-primary btn-sm'>추가</a>
+			<a href='form' class='btn btn-primary btn-sm'>추가</a>
 		</p>
 
 		<table class='table table-hover'>
@@ -32,7 +37,7 @@
 				<c:forEach items="${list}" var="member">
 					<tr>
 						<td>${member.no}</td>
-						<td><a href='view.do?no=${member.no}'>${member.name}</a></td>
+						<td><a href='${member.no}'>${member.name}</a></td>
 						<td>${member.email}</td>
 						<td>${member.createdDate}</td>
 					</tr>
