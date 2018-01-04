@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .container {
-    width: 800px;
+    width: 680px;
 }
 
 
@@ -12,10 +12,10 @@ footer {
 }
 
 .toolbar {
-	margin: 3px 3px;
-	float: right;
+	margin: 3px 0px;
 }
 
 .searchbox {
-	display: inline-block;
+	float: right;
 }
+

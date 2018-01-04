@@ -5,11 +5,11 @@
 
 <!-- DAO 객체를 자동으로 생성하려면, namespace의 값이 인터페이스 이름과 같아야 한다. -->
 <mapper namespace="java100.app.dao.MemberDao">
-	
+
 	<resultMap type="member" id="memberMap">
 		<id column="no" property="no" />
-		<result column="regdt" property="createdDate" />
 		<result column="pwd" property="password" />
+		<result column="regdt" property="createdDate" />
 	</resultMap>
 
 
@@ -23,20 +23,20 @@
 		<include refid="select1" />
 		from ex_memb
 
-	 <if test="words != null">
-	        <where>
-	            name in 
-	            <foreach collection="words" item="word" 
-	                     open="(" close=")" separator=",">
-	                #{word}
-	            </foreach>
-	            or email in 
-                <foreach collection="words" item="word" 
-                         open="(" close=")" separator=",">
-                    #{word}
-                </foreach>
-	        </where>
-        </if>
+		<if test="words != null">
+			<where>
+				name in
+				<foreach collection="words" item="word" open="(" close=")"
+					separator=",">
+					#{word}
+				</foreach>
+				or email in
+				<foreach collection="words" item="word" open="(" close=")"
+					separator=",">
+					#{word}
+				</foreach>
+			</where>
+		</if>
 
 		<!-- 정렬 조건에 따라 SQL문을 변경한다. -->
 		order by
@@ -57,20 +57,30 @@
 	</select>
 
 	<select id="findByNo" resultMap="memberMap" parameterType="int">
-		<include refid="select1"/>
+		<include refid="select1" />
 		from ex_memb
 		where no=#{value}
 	</select>
 
-	<insert id="insert" parameterType="member" >
-		insert into ex_memb(name,email,pwd,regdt) 
+	<select id="findByEmailAndPassword" resultMap="memberMap"
+		parameterType="map">
+		<include refid="select1" />
+		from ex_memb
+		where email=#{email} and pwd=password(#{password})
+	</select>
+
+	<insert id="insert" parameterType="member">
+		insert into
+		ex_memb(name,email,pwd,regdt)
 		values(#{name},#{email},password(#{password}),now())
 	</insert>
 
 
 	<update id="update" parameterType="member">
-		update ex_memb set name=#{name},email=#{email},pwd=password(#{password}}) where no=#{no}
+		update ex_memb set
+		name=#{name},email=#{email},pwd=password(#{password}) where no=#{no}
 	</update>
+	
 
 	<delete id="delete" parameterType="int">
 		delete from ex_memb where
