@@ -45,7 +45,7 @@
 
 </div>
 
-<%@ include file="../jslib.txt"%>
+<%@ include file="../jslib.jsp"%>
 
 </body>
 </html>

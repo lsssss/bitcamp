@@ -39,6 +39,6 @@
 </form>
 <jsp:include page="../footer.jsp"/>
 </div>
-<%@ include file="../jslib.txt" %>
+<%@ include file="../jslib.jsp"%>
 </body>
 </html>

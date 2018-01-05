@@ -3,6 +3,9 @@ package java100.app.dao;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import java100.app.domain.Board;
 
 //BoardDao 클래스로부터 메서드 호출 규칙만 분리하여 따로 정의한다.
@@ -16,6 +19,7 @@ public interface BoardDao {
     int delete(int no);
     Board findByNo(int no);
     int updateViewCount(int no);
+    int countAll();
 }
 
 
