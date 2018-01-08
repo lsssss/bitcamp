@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- DAO 객체를 자동으로 생성하려면, namespace의 값이 인터페이스 이름과 같아야 한다. -->
+<mapper namespace="java100.app.dao.RoomDao">
+
+
+	<resultMap type="room" id="roomMap">
+		<id column="no" property="no" />
+		<result column="loc" property="location" />
+	</resultMap>
+
+
+	<sql id="select1">
+		select no,loc,name,capacity
+	</sql>
+
+
+	<select id="findAll" resultMap="roomMap" parameterType="map">
+		<include refid="select1" />
+		from ex_room
+
+		<if test="names != null">
+			<where>
+				name in
+				<foreach collection="names" item="name" open="(" close=")" separator=",">
+					#{name}
+				</foreach>
+				or loc in
+				<foreach collection="names" item="name" open="(" close=")" separator=",">
+					#{name}
+				</foreach>
+			</where>
+		</if>
+
+		<!-- 정렬 조건에 따라 SQL문을 변경한다. -->
+		order by
+		<choose>
+			<when test="orderColumn == 'no' and align == 'desc'">
+				no desc
+			</when>
+			<when test="orderColumn == 'loc' and align == 'asc'">
+				loc asc
+			</when>
+			<when test="orderColumn == 'name' and align == 'desc'">
+				name desc
+			</when>
+			<otherwise>
+				name asc
+			</otherwise>
+		</choose>
+	</select>
+
+	<insert id="insert" parameterType="room">
+		insert into
+		ex_room(loc,name,capacity)
+		values(#{location},#{name},#{capacity})
+	</insert>
+
+	<select id="countAll" resultType="int">
+		select count(*) from ex_room 
+	</select>
+
+	<delete id="delete" parameterType="int">
+		delete from ex_room where
+		no=#{value}
+	</delete>
+
+
+</mapper>  
+
+
+
+
+
+
+
+
+
