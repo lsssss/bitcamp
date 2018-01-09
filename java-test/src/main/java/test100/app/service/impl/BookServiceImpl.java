@@ -49,8 +49,6 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public int update(Book book) {
-        
-            
         bookDao.deleteFile(book.getBookno());
         return bookDao.update(book);
         

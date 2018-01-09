@@ -19,7 +19,7 @@
 
 	<sql id="select1">
 		select
-		bookno, booktitle, publisher, price
+		bookno, bookphoto, booktitle, publisher, price
 	</sql>
 
 
@@ -65,8 +65,8 @@
 	</delete>
 	
 	
-	<delete id="deletefile" parameterType="book">
-		update ex_test set bookphoto="NULL" where bookno=#{bookno}
+	<delete id="deleteFile" parameterType="book">
+		update ex_test set bookphoto = null where bookno=#{bookno}
 	</delete>
 
 </mapper>  

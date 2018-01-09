@@ -12,18 +12,12 @@
 <link rel='stylesheet' href='../../css/common.css'>
 </head>
 <body>
+	
 	<div class='container'>
-
 		<jsp:include page="../header.jsp" />
 
 		<h1>도서 목록</h1>
 
-		<div class="toolbar" style="float: right">
-			<form action="list" method="get" class="searchbox">
-				<input type="text" name="word">
-				<button>검색</button>
-			</form>
-		</div>
 
 		<p>
 			<a href='form' class='btn btn-primary btn-sm'>추가</a>
@@ -31,35 +25,49 @@
 
 		<table class='table table-hover'>
 			<thead>
-				<tr>
-					<th>도서 번호</th>
-					<th>도서 제목</th>
-					<th>출판사</th>
-					<th>가격</th>
+				<tr class='tr2'>
+					<th class='th1'>사진</th>
+					<th class='th1'>도서명</th>
+					<th class='th1'>도서 제목</th>
+					<th class='th1'>출판사</th>
+					<th class='th1'>가격</th>
 				</tr>
 			</thead>
 			<tbody>
-
+			
 				<c:forEach items="${list}" var="book">
-					<c:set var="booktitle"
-						value="${fn:length(book.booktitle)== 0 ? '(제목이 없습니다.)' : book.booktitle}" />
-					<tr>
-						<td>${book.bookno}</td>
-						<td>><a href='${book.bookno}'><span class="d-inline-block text-truncate"
-							style="max-width: 300px"> ${booktitle} </span></a></td>
-						<td>${book.publisher}</td>
-						<td>${book.price}</td>
-					</tr>
+					<c:set var="booktitle" value="${fn:length(book.booktitle)== 0 ? '(제목이 없습니다.)' : book.booktitle}" />
+						<tr class='tr1' onclick="location.href='${book.bookno}'" style="cursor:pointer;">
+						
+						<td class='td2'>
+           				 <img src="${contextPath}/download/${book.bookphoto}" style="width:auto; height:200px">
+    				    </td>
+						
+						
+						<td class='td1' >${book.bookno}</td>
+						<td class='td1'><span
+								class="d-inline-block text-truncate" style="max-width: 300px">
+									${booktitle} </span></td>
+									
+						<td class='td1'>${book.publisher}</td>
+						
+						
+						<td class='td1'>${book.price}</td>
+						
+						</tr>
 				</c:forEach>
-
 			</tbody>
+			<tr>
+			</tr>
 		</table>
+		
 
+		
 		<jsp:include page="../next.jsp" />
-		<jsp:include page="../footer.jsp" />
-
+		<jsp:include page="../footer.jsp"/>
 	</div>
-
+	
+	
 	<%@ include file="../jslib.jsp"%>
 
 </body>

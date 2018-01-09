@@ -66,7 +66,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 
-		<property name="mapperLocations" value="classpath*:test100/app/dao/mysql/BookDao.xml" />
+		<property name="mapperLocations" value="classpath*:test100/app/dao/mysql/*Dao.xml" />
 
 		<property name="typeAliasesPackage" value="test100.app.domain" />
 	</bean>
@@ -80,11 +80,11 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 	
-	
+<!-- 	
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-	
+	 -->
 
 	<!-- 이 설정 파일에서 사용할 값이 들어 있는 프로퍼티 파일을 로딩하는 객체 등록 -->
 	<context:property-placeholder location="classpath*:test100/app/jdbc.properties" />
@@ -96,11 +96,11 @@
 		<property name="basePackage" value="test100.app.dao" />
 	</bean>
 
-
+	<!-- 
 	 <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <tx:method name="list*" read-only="true"/>
-            <!-- <tx:method name="get*" read-only="true"/> -->
+            <tx:method name="get*" read-only="true"/>
             <tx:method name="*"/>
         </tx:attributes>
     </tx:advice>
@@ -109,7 +109,7 @@
         <aop:pointcut id="ServiceOperation" expression="execution(* test100.app.service..*ServiceImpl.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="ServiceOperation"/>
     </aop:config>
-	
+	 -->
 
 </beans>
 

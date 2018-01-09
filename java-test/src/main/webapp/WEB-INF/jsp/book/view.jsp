@@ -59,7 +59,7 @@
         </div>
         </div>
         
-            <div class='form-group row'>
+        <div class='form-group row'>
         <label for='information' class='col-sm-2 col-form-label'>책정보</label>
         <div class='col-sm-10'>
         <textarea class='form-control' id='information' 
@@ -68,18 +68,21 @@
         </div>
         
       	<div class='form-group row'>
-        <label class='col-sm-2 col-form-label'>첨부파일</label>
+        <label class='col-sm-2 col-form-label'>첨부파일  </label>
         <div class='col-sm-10'>
         <c:forEach items="${book.bookphoto}" var="file">
-          <a href="${contextPath}/download/${book.bookphoto}">${book.bookphoto}</a><br>
+        	<a href="${contextPath}/download/${book.bookphoto}">${book.bookphoto}</a><br>
+            <img src="${contextPath}/download/${book.bookphoto}" style="width:40%; height:auto">
         </c:forEach>
         </div>
         </div>
         
+        
+        
         <div class='form-group row'>
-		<label for='file1' class='col-sm-2 col-form-label'>사진</label>
+		<label for='file' class='col-sm-2 col-form-label'>사진</label>
 		<div class='col-sm-10'>
-		<input type="file" class="form-control-file" id="bookphoto" name="bookphoto">
+		<input type="file" class="form-control-file" id="file" name="file">
 		</div>
 		</div>
 
