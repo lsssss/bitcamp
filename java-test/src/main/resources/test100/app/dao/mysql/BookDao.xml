@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- DAO 객체를 자동으로 생성하려면, namespace의 값이 인터페이스 이름과 같아야 한다. -->
+<mapper namespace="test100.app.dao.BookDao">
+
+
+	<resultMap type="book" id="bookMap">
+		<id column="bookno" property="bookno" />
+		<result column="booktitle" property="booktitle" />
+		<result column="publisher" property="publisher" />
+		<result column="publicationdate" property="publicationdate" />
+		<result column="price" property="price" />
+		<result column="information" property="information" />
+		<result column="bookphoto" property="bookphoto" />
+	</resultMap>
+
+	<sql id="select1">
+		select
+		bookno, booktitle, publisher, price
+	</sql>
+
+
+	<select id="findAll" resultMap="bookMap" parameterType="map">
+	<include refid="select1"/>
+		from ex_test     
+	</select>
+
+	<select id="findByNo" resultMap="bookMap" parameterType="int">
+        <include refid="select1"/>
+          ,publicationdate
+          ,information
+		  ,bookphoto
+  	      from ex_test
+        where bookno=#{value}
+    </select>
+    
+	
+	<select id="countAll" resultType="int">
+		select count(*) from ex_test
+	</select>
+	
+
+   <insert id="insert" parameterType="book">
+        insert into ex_test(booktitle,publisher,price,information,publicationdate,bookphoto)
+        values(#{booktitle},#{publisher},#{price},#{information},#{publicationdate},#{bookphoto})
+    </insert>
+
+
+	<update id="update" parameterType="book" >
+		update ex_test set
+		booktitle=#{booktitle},
+		publisher=#{publisher},
+		price=#{price},
+		information=#{information},
+		publicationdate=#{publicationdate},
+		bookphoto=#{bookphoto}
+		where bookno=#{bookno}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		delete from ex_test where bookno=#{bookno}
+	</delete>
+	
+	
+	<delete id="deletefile" parameterType="book">
+		update ex_test set bookphoto="NULL" where bookno=#{bookno}
+	</delete>
+
+</mapper>  
+
+
+
+
+
+
+
+
+

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -68,7 +69,8 @@ public class BoardController extends HttpServlet{
         model.addAttribute("list", boardService.list(pageNo, pageSize, options));
         return "board/list";
     }
-
+    
+    //@Transactional
     @RequestMapping("add")
     public String add(
             Board board,
@@ -97,7 +99,8 @@ public class BoardController extends HttpServlet{
         board.setWriter(loginUser);
         
         boardService.add(board);
-
+        
+        boardService.addFiles(board.getFiles(), board.getNo());
         
         return "redirect:list";
     }

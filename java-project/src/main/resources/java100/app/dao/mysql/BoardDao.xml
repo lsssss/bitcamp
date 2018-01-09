@@ -102,7 +102,7 @@
         where b.no=#{value}
     </select>
 	
-		<select id="countAll" resultType="int">
+	<select id="countAll" resultType="int">
 		select count(*) from ex_board
 	</select>
 	

@@ -6,6 +6,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java100.app.dao.BoardDao;
 import java100.app.dao.FileDao;
@@ -61,18 +63,16 @@ public class BoardServiceImpl implements BoardService{
 
 
     @Override
+    @Transactional(propagation=Propagation.REQUIRES_NEW)
     public int add(Board board) {
         
-      
-        
-        
         int count = boardDao.insert(board);
+
+        try {
         
-        List<UploadFile> files =board.getFiles();
-        
-        for(UploadFile file : files) {
-            //file.setBoardNo(board.getNo());
-            fileDao.insert(file);
+        addFiles( board.getFiles(),board.getNo());
+        }catch (Exception e) {
+            System.out.println("첨부파일 등록중 예외 발생!");
         }
         
         return count;
@@ -85,13 +85,10 @@ public class BoardServiceImpl implements BoardService{
         
         
         fileDao.deleteAllByBoardNo(board.getNo());
-        List<UploadFile> files =board.getFiles();
+     
         
-        for(UploadFile file : files) {
-            file.setBoardNo(board.getNo());
-            fileDao.insert(file);
-        }
-        
+        addFiles( board.getFiles(),board.getNo());
+  
         
         
         return count;
@@ -105,10 +102,16 @@ public class BoardServiceImpl implements BoardService{
        
        
     }
-
-
-
-
     
-    
+    @Override
+    @Transactional(propagation=Propagation.REQUIRES_NEW)
+    public void addFiles(List<UploadFile> files, int boardNo) {
+        for(UploadFile file : files) {
+            file.setBoardNo(boardNo);
+            fileDao.insert(file);
+        
+    }
+
+
+    }   
 }

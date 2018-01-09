@@ -1,0 +1,15 @@
+create table ex_test (
+bookno int not null,
+booktitle varchar(30) not null,
+publisher varchar(30) not null,
+publicationdate	varchar(50) not null,
+price int not null,
+information varchar(100) not null,
+bookphoto varchar(255) not null
+);
+
+
+
+alter table ex_test add constraint primary key (bookno);
+
+alter table ex_test modify column bookno int not null auto_increment;

@@ -104,13 +104,23 @@
 		</mvc:interceptor>
 	</mvc:interceptors> 
 	
-		
 	
-	<!-- <tx:annotation-driven transaction-manager="txManager"/> -->
 	
-	<tx:annotation-driven/>
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="list*" read-only="true"/>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice> 
 	
-
+	
+	
+	
+	<aop:config>
+        <aop:pointcut id="ServiceOperation" expression="execution(* java100.app.service..*ServiceImpl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="ServiceOperation"/>
+    </aop:config>
 	
 
 </beans>
