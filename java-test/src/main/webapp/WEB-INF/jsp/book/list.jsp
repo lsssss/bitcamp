@@ -37,22 +37,22 @@
 			
 				<c:forEach items="${list}" var="book">
 					<c:set var="booktitle" value="${fn:length(book.booktitle)== 0 ? '(제목이 없습니다.)' : book.booktitle}" />
-						<tr class='tr1' onclick="location.href='${book.bookno}'" style="cursor:pointer;">
+						<tr id='tr1' class='tr1' onclick="location.href='${book.bookno}'" style="cursor:pointer;">
 						
 						<td class='td2'>
-           				 <img src="${contextPath}/download/${book.bookphoto}" style="width:auto; height:200px">
+           				 <img src="${contextPath}/download/${book.bookphoto}" style="width:auto; height:150px">
     				    </td>
 						
 						
-						<td class='td1' >${book.bookno}</td>
-						<td class='td1'><span
+						<td id='td1' class='td1' >${book.bookno}</td>
+						<td id='td1' class='td1'><span
 								class="d-inline-block text-truncate" style="max-width: 300px">
 									${booktitle} </span></td>
 									
-						<td class='td1'>${book.publisher}</td>
+						<td id='td1' class='td1'>${book.publisher}</td>
 						
 						
-						<td class='td1'>${book.price}</td>
+						<td id='td1' class='td1'>${book.price}</td>
 						
 						</tr>
 				</c:forEach>

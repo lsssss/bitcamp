@@ -60,7 +60,6 @@
 </div>
 </div>
 
-
 <div class='form-group row'>
 <div class='col-sm-10'>
 <button class='btn btn-primary btn-sm'>등록</button>

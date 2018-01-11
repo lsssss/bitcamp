@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 Property Basic</title>
+<style>
+input[type=checkbox]:checked+div {
+	height: 0px;
+}
+
+div {
+	overflow: hidden;
+	border: 1px solid red;
+	width: 650px;
+	height: 300px;
+	/* 변환 효과를 적용합니다. */
+	-ms-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 3s;
+}
+</style>
+</head>
+<body>
+	<button id="btn1">접기</button>
+	<div id="d1">
+		<h1>Lorem ipsum dolor amet</h1>
+	</div>
+	<script>
+	var d = document.getElementById('d1');
+	
+	var btn = document.getElementById('btn1');
+	btn.onclick = function() {
+	    //d1.style['height']= 0;
+	    d1.style['background-color']="red";
+	}
+	</script>
+</body>
+</html>

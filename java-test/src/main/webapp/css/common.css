@@ -4,10 +4,15 @@
 	width: 800px;
 }
 
-.tr1 {
-	height: 200px;
-	width: auto;
+
+#td1 {
 	vertical-align: middle;
+	font-size: 25px;
+}
+
+
+.tr1 {
+	width: auto;
 	text-align: center;
 	font-size: 15px;
 }
@@ -22,7 +27,8 @@
 .td1 {
 	width: auto;
 	valign: middle;
-}
+	
+	}
 
 footer {
 	text-align: center;
