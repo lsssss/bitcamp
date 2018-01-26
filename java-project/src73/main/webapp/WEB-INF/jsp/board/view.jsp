@@ -95,6 +95,7 @@
         </div>
         </form>
 </c:if>
+
 <c:if test="${empty board}">
         <p>'${param.no}'번 게시물이 없습니다.</p>
 </c:if>
