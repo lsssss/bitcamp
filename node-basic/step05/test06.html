@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<title>Insert title here</title>
+
+</head>
+<body>
+<h1>안녕하세요</h1>
+
+
+<script type="text/javascript">
+"use strict"
+// 호이스팅(hoisting)은 <script> 태그 단위로 수행된다.
+// => 모든 글로벌 변수와 함수는 window 객체의 멤버이다.
+f1(); //Ok
+f2(); //아직 다음 <script> 태그를 실행한 상태가 아니기 때문에 
+	  //f2() 함수는 아직 존재하지 않는다.
+	  
+	  
+function f1() {console.log("f1()...")}
+</script>
+
+
+<script type="text/javascript">
+function f2() {console.log("f2()...")}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,1 @@
+var result=0;functin plus(v){r+=v;}function minus(v){r-=v;}

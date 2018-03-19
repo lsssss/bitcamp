@@ -1,0 +1,38 @@
+<!-- AJXA API 사용법 ,콘솔창으로 서버키고 하세요 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML</title>
+</head>
+<body>
+	<button id="btn">동기 요청</button>
+	<br>
+	<textarea id="ta" rows="15" cols="80"></textarea>
+
+	<script type="text/javascript">
+		var btn = window.document.querySelector('#btn');
+
+        btn.onclick = function() {
+	        var xhr = new XMLHttpRequest();
+
+	        xhr.open('GET', 'http://localhost:8888/okok', false)
+
+	        xhr.send(); //동기 요청이기 떄문에 서버에서 응답 데이터를 모두 받을 때까지 리턴하지 않는다.
+
+	        // 4) 서버에서 받은결과를 console 창으로 출력한다.
+	        // 서버에서 받은 데이터는 responseText라는 이름으로 보관되어 있다.
+	        console.log(xhr.responseText)
+
+        }
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- -->

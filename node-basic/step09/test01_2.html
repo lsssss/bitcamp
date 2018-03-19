@@ -1,0 +1,40 @@
+<!-- AJXA API 사용법 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML</title>
+</head>
+<body>
+	<button id="btn">비동기 요청</button>
+	<br>
+	<textarea id="ta" rows="15" cols="80"></textarea>
+
+	<script type="text/javascript">
+		var btn = window.document.querySelector('#btn');
+
+        btn.onclick = function() {
+	        
+	        var xhr = new XMLHttpRequest();
+	        
+	        xhr.onreadystatechange =function(){
+	        	console.log('요청 상태가 변경되었습니다.');
+	        }
+
+	        xhr.open('GET', 'http://localhost:8888/okok', true)
+	        xhr.send(); 
+
+	        console.log(xhr.responseText)
+
+        }
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- -->

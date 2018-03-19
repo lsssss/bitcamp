@@ -1,0 +1,49 @@
+<!-- AJXA API 사용법 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML</title>
+</head>
+<body>
+	<button id="btn">비동기 요청</button>
+	<br>
+	<textarea id="ta" rows="15" cols="80"></textarea>
+
+	<script type="text/javascript">
+		var btn = window.document.querySelector('#btn');
+
+        btn.onclick = function() {
+	        
+	        var xhr = new XMLHttpRequest();
+	        
+	        xhr.onreadystatechange =function(){
+	        		if(xhr.readyState < 4) return;
+	        		
+	        		
+	        		if (xhr.status != 200){
+	        			console.log('서버오류!');
+	        			return;
+	        		}
+	        		
+	        		console.log(xhr.responseText);
+	        }
+
+	        xhr.open('GET', 'http://localhost:8888/okok?name=aaa&age=20&working=true', true)
+
+	        xhr.send(); //동기 요청이기 떄문에 서버에서 응답 데이터를 모두 받을 때까지 리턴하지 않는다.
+
+	        console.log(xhr.responseText)
+
+        }
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- -->

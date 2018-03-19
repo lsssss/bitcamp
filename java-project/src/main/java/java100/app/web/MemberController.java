@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java100.app.dao.MemberDao;
 import java100.app.domain.Member;
 import java100.app.service.MemberService;
 
@@ -19,8 +18,6 @@ public class MemberController {
 
     @Autowired MemberService memberService;
     
-    @Autowired
-    MemberDao memberDao;
 
     @RequestMapping("list")
     public String list(
